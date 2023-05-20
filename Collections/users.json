@@ -1,0 +1,15 @@
+[{
+  "_id": {
+    "$oid": "643c4c6deaf4b01b1eb08a33"
+  },
+  "name": "igo",
+  "email": "igo@gmail.com",
+  "password": "$2b$10$Oki.xVcJPke4yBlttN8zNONXScDpOGzm/mSXHoo2fUtQmf.RCVkza",
+  "createdAt": {
+    "$date": "2023-04-16T19:27:06.756Z"
+  },
+  "cart": {
+    "$oid": "643c4c6deaf4b01b1eb08a31"
+  },
+  "__v": 0
+}]

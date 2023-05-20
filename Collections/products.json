@@ -1,0 +1,49 @@
+[{
+  "_id": {
+    "$oid": "6437e24d8a44325daf22d35d"
+  },
+  "nameProduct": "Sabonete em Barra Dove Branco 90 GR 6 unidades, Dove",
+  "description": "Dove não é um simples sabonete em barra comum. É um sabonete de beleza feito com tecnologia Syndet que vai além da limpeza, nutrindo a pele conforme remove a sujeira do dia a dia. ",
+  "img": "https://m.media-amazon.com/images/I/51zOhxG6HML._AC_SX569_.jpg",
+  "price": 49.9,
+  "category": "higiene",
+  "createdAt": {
+    "$date": "2023-04-13T11:06:39.400Z"
+  },
+  "updatedAt": {
+    "$date": "2023-04-13T11:06:39.400Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643982de7809e30585d63aff"
+  },
+  "nameProduct": "Leite Pó Integral Instantâneo Piracanjuba Pouch 800g",
+  "description": "Combina com frutas, sobremesas, achocolatados e o que mais a sua criat…",
+  "img": "https://m.media-amazon.com/images/I/51-I8V2e4UL._AC_SX569_.jpg",
+  "price": 35.81,
+  "category": "laticinios",
+  "createdAt": {
+    "$date": "2023-04-14T14:27:45.480Z"
+  },
+  "updatedAt": {
+    "$date": "2023-04-14T14:27:45.480Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643984777809e30585d63b02"
+  },
+  "nameProduct": "Arroz Tio João Parboilizado 2kg",
+  "description": "O Arroz Parboilizado Tio João passa por um tratamento hidrotérmico (água fervente), que consiste em cozinhar parcialmente os grãos com casca, desta forma parte das vitaminas e minerais presentes no farelo migram para o interior do grão",
+  "img": "https://m.media-amazon.com/images/I/91IolzHCMhL._AC_SY606_.jpg",
+  "price": 19.9,
+  "category": "mercearia",
+  "createdAt": {
+    "$date": "2023-04-14T14:27:45.480Z"
+  },
+  "updatedAt": {
+    "$date": "2023-04-14T14:27:45.480Z"
+  },
+  "__v": 0
+}]
