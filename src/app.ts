@@ -24,7 +24,7 @@ app.use(routes);
 const port = 5000;
 
 io.on("connection", (socket) => {
-  console.log("Novo cliente conectado");
+  console.log("Novo cliente conectado!");
 
   // Lógica do chat e eventos do Socket.IO
   socket.on("message", async (message) => {
@@ -50,7 +50,8 @@ io.on("connection", (socket) => {
       )
       console.log("Mensagem salva:", savedMessage);
 
-      socket.emit("message", message);
+      io.emit("message", message);
+
     } catch (error) {
       console.error("Erro ao salvar a mensagem:", error);
     }
