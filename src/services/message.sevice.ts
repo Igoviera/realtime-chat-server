@@ -6,6 +6,10 @@ class MessageServices {
     return messageRepository.createMessage(message);
   };
 
+  async deleteMessage(){
+    return messageRepository.deleteMessage()
+  }
+
   async findAllMessage(){
     return messageRepository.findAllMessage()
   }

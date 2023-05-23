@@ -21,10 +21,10 @@ export const messageSchema = new Schema({
     message: {
         type: String,
     },
-    createdAt: {
-        type: Date,
-        default: new Date()
-    },
-})
+    // createdAt: {
+    //     type: Date,
+    //     default: new Date()
+    // },
+},{ timestamps: true })
 
 export const Message = mongoose.model('Message', messageSchema)

@@ -4,6 +4,7 @@ export interface IsUser {
     name: string,
     email: string,
     cpf: string,
+    status: boolean,
     password: string,
     messages: string[],
     createdAt: string | Date
@@ -33,6 +34,9 @@ export const userSchema = new Schema({
         type: String,
         require: true,
         default: 'https://icon-library.com/images/anonymous-avatar-icon/anonymous-avatar-icon-25.jpg'
+    },
+    status: {
+        type: Boolean
     },
     messages: [{
         type: mongoose.Schema.Types.ObjectId,

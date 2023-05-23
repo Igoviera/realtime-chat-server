@@ -18,6 +18,10 @@ class MessageRepository{
         return createdMessage
     };
 
+    async deleteMessage(){
+        await Message.deleteMany() 
+    }
+
     async findAllMessage(){
         return await Message.find()
     }
