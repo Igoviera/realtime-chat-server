@@ -1,17 +1,26 @@
-# E-commerce com Express e MongoDB
-
-## Para instalar as dependências do projeto, execute o seguinte comando:
-
-npm install
+## Tecnologias utilizadas
+ - Node.js/express
+ - MongoDB
+ - Mongoose
+ - JWT
+ - Bcrypt
+ - Typescript
 
 ## Configuração
 Antes de executar o projeto, você precisa configurar as variáveis de ambiente. Crie um arquivo .env na raiz do projeto e adicione as seguintes variáveis:
 
 DATABASE_URL = <URL do banco de dados MongoDB>
-JWT_SECRET_KEY= 
+JWT_SECRET_KEY=  
 
-## Para executar o projeto em modo de desenvolvimento, execute o seguinte comando:
+## Como rodar a aplicação
+Clone o repositório e execute o seguinte comando no diretório do projeto para instalar as dependencias:
+```bash
+npm intall    
+```
 
-npm run start:dev
+Depois de instalar as dependencias execute o seguinte comando para iniciar a aplição,
+Isso iniciará o servidor de desenvolvimento em http://localhost:5000>.
+```bash
+npm run start-dev
+```
 
-Isso iniciará o servidor de desenvolvimento em http://localhost:8888>.
