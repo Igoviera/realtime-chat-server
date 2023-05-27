@@ -31,7 +31,7 @@ router.get('/users', async (req: Request, res: Response) => {
     }
 });
 
-router.get('/user/:id',  async (req: Request, res: Response) => {
+router.get('/user/:id', auth, async (req: Request, res: Response) => {
     try {
        const user = await userService.userById(req.params.id)
        return res.status(200).send(user)
@@ -40,7 +40,7 @@ router.get('/user/:id',  async (req: Request, res: Response) => {
     }
 });
 
-router.get('/user-cpf/:cpf', async (req: Request, res: Response) => {
+router.get('/user-cpf/:cpf', auth, async (req: Request, res: Response) => {
     try {
         const user = await userService.userByCpf(req.params.cpf)
         return res.status(200).send(user)
@@ -59,7 +59,7 @@ router.put('/user/update/:id', auth, async (req: Request, res: Response) => {
 });
 
 
-router.delete('/user/messages/:id', async (req: Request, res: Response) => {
+router.delete('/user/messages/:id', auth, async (req: Request, res: Response) => {
     try {
         await userService.deleteMessage(req.params.id)
         return res.status(200).send({message:'Messagens excluitas com sucesso'})

@@ -20,13 +20,12 @@ class UserServices {
         const user = await userRepository.userByCpf(cpf)
 
         if (!user) throw new Error('CPF ou senha inválido')
-
+        
         if (user.password && typeof user.password === 'string') {
             const result = await bcrypt.compare(password, user.password)
 
             if (result) {
                 const tokenPayload = {
-                    cpf: user.cpf,
                     _id: user._id,
                     name: user.name
                 }
@@ -44,7 +43,6 @@ class UserServices {
 
 
         }
-
 
         throw new Error('Email ou senha inválido')
     }

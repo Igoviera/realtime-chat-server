@@ -1,12 +1,12 @@
-import mongoose, { Schema } from "mongoose";
+import mongoose, { Schema } from 'mongoose'
 
 export interface IsUser {
-    name: string,
-    email: string,
-    cpf: string,
-    status: boolean,
-    password: string,
-    messages: string[],
+    name: string
+    email: string
+    cpf: string
+    status: boolean
+    password: string
+    messages: string[]
     createdAt: string | Date
 }
 
@@ -15,20 +15,20 @@ export const userSchema = new Schema({
         type: String,
         required: [true, 'O nome é obrigatório'],
         minlength: [3, 'O nome deve ter pelo menos 3 caracteres'],
-        maxlength: [30, 'O nome deve ter no máximo 30 caracteres'],
+        maxlength: [30, 'O nome deve ter no máximo 30 caracteres']
     },
     email: {
         type: String,
-        required: [true, 'O e-mail é obrigatório'],
+        required: [true, 'O e-mail é obrigatório']
     },
-    cpf:{
+    cpf: {
         type: String,
-        required: [true, 'O CPF é obrigatório'],
+        required: [true, 'O CPF é obrigatório']
     },
     password: {
         type: String,
         required: [true, 'A senha é obrigatório'],
-        minlength: [8, 'A senha deve ter pelo menos 8 caracteres'],
+        minlength: [8, 'A senha deve ter pelo menos 8 caracteres']
     },
     img: {
         type: String,
@@ -38,14 +38,16 @@ export const userSchema = new Schema({
     status: {
         type: Boolean
     },
-    messages: [{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Message'
-    }],
+    messages: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Message'
+        }
+    ],
     createdAt: {
         type: Date,
         default: new Date()
-    },
+    }
 })
 
 export const User = mongoose.model('User', userSchema)
