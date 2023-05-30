@@ -1,4 +1,3 @@
-import { Message } from '../model/messageModel'
 import { IsUser, User } from '../model/user.model'
 
 class UserRepository {

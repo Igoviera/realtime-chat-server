@@ -24,12 +24,19 @@ app.use(routes)
 
 const port = 5000
 
-io.on('connection', (socket) => {
+io.on('connection', async (socket) => {
     console.log('Novo cliente conectado!', socket.id)
 
-    socket.on('username', (username) => {
-        socket.data.username = username
-        console.log(socket.data.username)
+    let userId: string
+
+    socket.on('idUser', async (idUser) => {
+        userId = idUser
+
+        try {
+            await User.updateOne({ _id: idUser }, { status: true })
+        } catch (error) {
+            console.error('Erro ao atualizar o status do usuário:', error)
+        }
     })
 
     // Lógica do chat e eventos do Socket.IO
@@ -41,7 +48,8 @@ io.on('connection', (socket) => {
         const newMessage = new Message({
             sender: message.sender,
             recipient: message.recipient,
-            message: message.message
+            message: message.message,
+            createdAt: message.createdAt
         })
 
         try {
@@ -58,9 +66,13 @@ io.on('connection', (socket) => {
         // Exemplo de envio da mensagem de volta para o remetente
     })
 
-    socket.on('disconnect', () => {
+    socket.on('disconnect', async () => {
         console.log('Cliente desconectado', socket.id)
-        // await User.findByIdAndUpdate(userId, {status: true})
+        try {
+            await User.updateOne({ _id: userId }, { status: false })
+        } catch (error) {
+            console.error('Erro ao atualizar o status do usuário:', error)
+        }
     })
 })
 

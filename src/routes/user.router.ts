@@ -7,9 +7,9 @@ const router = Router();
 router.post('/cadastrar/user', async (req: Request, res: Response) => {
     try {
         await userService.createUser(req.body)
-        return res.status(201).send({ messge: 'Usuario cadastrado com sucesso!' })
+        return res.status(201).send({ message: 'Usuario cadastrado com sucesso!' })
     } catch (error: any) {
-        res.status(400).send({ message: error.message })
+        res.status(400).send({message: error.message})
     }
 });
 
