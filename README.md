@@ -9,8 +9,9 @@
 ## Configuração
 Antes de executar o projeto, você precisa configurar as variáveis de ambiente. Crie um arquivo .env na raiz do projeto e adicione as seguintes variáveis:
 
-DATABASE_URL = <URL do banco de dados MongoDB>
-JWT_SECRET_KEY=  
+DATABASE_URL = 
+
+JWT_SECRET_KEY =  
 
 ## Como rodar a aplicação
 Clone o repositório e execute o seguinte comando no diretório do projeto para instalar as dependencias:
